@@ -1,0 +1,35 @@
+{
+  "name": "rectify",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "firebase": "^9.10.0",
+    "framer-motion": "^10.12.2",
+    "intersection-observer": "^0.12.2",
+    "moment": "^2.29.4",
+    "next": "^12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-pdf": "^6.2.2",
+    "react-typical": "^0.1.3",
+    "react-vertical-timeline-component": "^3.6.0",
+    "tw-elements": "^1.0.0-beta2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^7.0.0",
+    "autoprefixer": "^10.4.12",
+    "babel-loader": "^7.1.5",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
