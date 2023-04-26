@@ -170,28 +170,30 @@ export default function Home() {
           id="about"
           className=" flex flex-col justify-center items-center min-h-full "
         >
-          <Fade left>
-            <div className="animate-pulse flex justify-center flex-col w-1/3 p-5 dark:text-white bg-[#3282b8] text-left border-2 rounded-md">
-              <h3 className="text-3xl dark:text-white ">About me</h3>
-
-              <p className="py-2 text-left">
+          <div className="animate-pulse flex justify-center flex-col w-1/2 p-5 dark:text-white text-center py-5">
+            <h3 className="text-3xl dark:text-white ">About me</h3>
+            <Bounce left>
+              <p className="bg-[#3282b8] py-2 px-2 text-left  mt-5 rounded-md">
                 I'm Mads, a passionate programmer, who codes frontend and
-                backend applications. I'm 29 Years old, living with my
-                girlfriend and dog in Kastrup, Copenhagen. Loves fitness, long
-                walks, gaming and coding.
+                backend applications. A well-organized person, problem solver an
+                I'm 29 Years old, living with my girlfriend and dog in Kastrup,
+                Copenhagen. Loves fitness, long walks, gaming and coding.
               </p>
-
-              <p className="py-2 text-left">
+            </Bounce>
+            <Bounce left>
+              <p className="bg-[#3282b8] py-2 px-2 text-left mt-2 rounded-md">
                 Bachelor in Computer Science from Syddansk universitet in
                 Odense, Denmark.
               </p>
-              <p className="py-2 text-left">
+            </Bounce>
+            <Bounce left>
+              <p className="bg-[#3282b8] py-2 px-2 text-left mt-2 rounded-md">
                 I started my coding journey back in 2018, and havent stopped
                 coding since. I love every aspect of it, and I don't plan on
                 stopping ever.
               </p>
-            </div>
-          </Fade>
+            </Bounce>
+          </div>
         </section>
 
         <section
@@ -413,9 +415,9 @@ export default function Home() {
             >
               <h3 className="ml-5 mt-2 text-3xl">Jumping Game</h3>
               <p className=" ml-5 mt-2">
-                A game where the goal is to jump as high as possible, and
-                achieve the highest score as you can. The project is done in
-                Javascript and CSS.
+                My first game I developed a few years back. A game where the
+                goal is to jump as high as possible, and achieve the highest
+                score as you can. The project is done in Javascript and CSS.
               </p>
               <div className="flex mt-5">
                 <a
@@ -504,7 +506,7 @@ export default function Home() {
               variants={cardVariantsLeft}
               className="rounded-md bg-[#3282B8] items-center justify-center px-2 py-2 overflow-y-hidden"
             >
-              <h3 className="ml-5 mt-2 text-3xl">Discord App</h3>
+              <h3 className="ml-5 mt-2 text-3xl">Disney+ App</h3>
               <p className=" ml-5 mt-2">
                 A project creating a Disney app, with google authentication.
               </p>
