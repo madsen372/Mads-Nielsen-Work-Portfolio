@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
 import Typical from "react-typical";
+import { Zoom, Fade, Bounce } from "react-reveal/";
 
 import {
   AiFillTwitterCircle,
@@ -138,7 +139,7 @@ export default function Home() {
         <section className="flex flex-col justify-center items-center min-h-screen">
           <div className="text-center p-10 flex justify-center items-center flex-col">
             <svg
-              className="background-white fill-white flex justify-center items-center p-10"
+              className="fill-black dark:fill-white flex justify-center items-center p-10"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 50 50"
               width="180px"
@@ -169,28 +170,28 @@ export default function Home() {
           id="about"
           className=" flex flex-col justify-center items-center min-h-full "
         >
-          <div className="flex justify-center flex-col w-[50%] py-5 dark:text-white text-left">
-            <h3 className="text-3xl dark:text-white ">About me</h3>
+          <Fade left>
+            <div className="animate-pulse flex justify-center flex-col w-1/3 p-5 dark:text-white bg-[#3282b8] text-left border-2 rounded-md">
+              <h3 className="text-3xl dark:text-white ">About me</h3>
 
-            <p className="py-2 text-left">
-              29 Years old, living with my girlfriend and dog in Kastrup,
-              Copenhagen. Loves fitness, long walks, gaming and coding. olol I
-              am a computer scientist and software developer. A Young <br />{" "}
-              dude who loves coding. Aspirigin to becoming the best possible
-              developer, and the best version of myself
-            </p>
+              <p className="py-2 text-left">
+                I'm Mads, a passionate programmer, who codes frontend and
+                backend applications. I'm 29 Years old, living with my
+                girlfriend and dog in Kastrup, Copenhagen. Loves fitness, long
+                walks, gaming and coding.
+              </p>
 
-            <p className="py-2 text-left">
-              Bachelor in Computer Science from Syddansk universitet in Odense,
-              Denmark. The best decision of my life was asking my girlfriend
-              out, the second one was applying for Computer Science.
-            </p>
-            <p className="py-2 text-left">
-              I started my coding journey back in 2018, and havent stopped
-              coding since. I love every aspect of it, and I don't plan on
-              stopping ever.
-            </p>
-          </div>
+              <p className="py-2 text-left">
+                Bachelor in Computer Science from Syddansk universitet in
+                Odense, Denmark.
+              </p>
+              <p className="py-2 text-left">
+                I started my coding journey back in 2018, and havent stopped
+                coding since. I love every aspect of it, and I don't plan on
+                stopping ever.
+              </p>
+            </div>
+          </Fade>
         </section>
 
         <section
@@ -205,12 +206,54 @@ export default function Home() {
               contentArrowStyle={{
                 borderRight: "7px solid  rgb(33, 150, 243)",
               }}
-              date="2022 - present"
+              date="2022 Nov. - present"
               iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
               icon={<MdSchool />}
             >
               <h3 className="vertical-timeline-element-title">
-                Backend Developer
+                WebbyPi AB/ Sweden - Software Developer
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Malmø, Sweden
+              </h4>
+
+              <div className="flex text-left mt-4 justify-normal flex-wrap ">
+                <span className="badges rounded mr-2 mt-0 br-2">
+                  Javascript
+                </span>
+                <span className="badges rounded mr-2 mt-0 br-2">PHP</span>
+                <span className="badges rounded mr-2 mt-0 br-2">Java</span>
+                <span className="badges rounded mr-2 mt-0 br-2">Wordpress</span>
+                <span className="badges rounded mr-2 mt-0 br-2">HTML/CSS</span>
+                <span className="badges rounded mr-2 mt-0 br-2">
+                  Javascript
+                </span>
+                <span className="badges rounded mr-2 mt-0 br-2">REST API</span>
+                <span className="badges rounded mr-2 mt-0 br-2">
+                  Material UI
+                </span>
+                <span className="badges rounded mr-2 mt-0 br-2">REST API</span>
+                <span className="badges rounded mr-2 mt-0 br-2">
+                  Material UI
+                </span>
+                <span className="badges rounded mr-2 mt-0 br-2">REST API</span>
+                <span className="badges rounded mr-2 mt-0 br-2">
+                  Material UI
+                </span>
+              </div>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="dark: vertical-timeline-element--work"
+              contentStyle={{ background: "#3282B8", color: "#fff" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  rgb(33, 150, 243)",
+              }}
+              date="2022 July - 2023 Jan."
+              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              icon={<MdSchool />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                Micar - Backend Developer - Part time
               </h3>
               <h4 className="vertical-timeline-element-subtitle">
                 København, Danmark
@@ -497,53 +540,53 @@ export default function Home() {
             Get in touch with me!
           </h3>
 
-          <motion.div
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: false, amount: 0.8 }}
-            className="text-8xl flex justify-center gap-16 py-3 text-gray-600 dark:text-[#BBE1FA]"
-          >
-            <div
-              variants={iconVariants}
-              className="flex justify-center items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
+          <div className="text-8xl flex justify-center gap-16 py-3 text-gray-600 dark:text-[#BBE1FA]">
+            <Bounce bottom>
+              <div
+                variants={iconVariants}
+                className="flex justify-center items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
               hover:-translate-y-1 hover:scale-110 duration-300"
-            >
-              <a
-                href="https://twitter.com/Madsnn99"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                <AiFillTwitterCircle />
-              </a>
-            </div>
-
-            <div
-              variants={iconVariants}
-              className="flex items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
+                <a
+                  href="https://twitter.com/Madsnn99"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillTwitterCircle />
+                </a>
+              </div>
+            </Bounce>
+            <Bounce bottom>
+              <div
+                variants={iconVariants}
+                className="flex items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
               hover:-translate-y-1 hover:scale-110 duration-300"
-            >
-              <a
-                href="https://www.linkedin.com/in/mads-nielsen-41538a1b9/"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                <AiFillLinkedin />
-              </a>
-            </div>
-            <div
-              variants={iconVariants}
-              className="flex items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
+                <a
+                  href="https://www.linkedin.com/in/mads-nielsen-41538a1b9/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin />
+                </a>
+              </div>
+            </Bounce>
+            <Bounce bottom>
+              <div
+                variants={iconVariants}
+                className="flex items-center flex-shrink-0 mr-6 cursor-pointer transition ease-in-out delay-150
               hover:-translate-y-1 hover:scale-110 duration-300"
-            >
-              <a
-                href="https://github.com/madsen372/"
-                rel="noopener noreferrer"
-                target="_blank"
               >
-                <AiFillGithub />
-              </a>
-            </div>
-          </motion.div>
+                <a
+                  href="https://github.com/madsen372/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <AiFillGithub />
+                </a>
+              </div>
+            </Bounce>
+          </div>
         </section>
         <footer
           id="contact"
